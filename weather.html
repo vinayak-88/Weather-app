@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+    <div class="wrapper">
+
+        <h1>WEATHER APP</h1>
+        
+        <!--buttons-->
+
+        <div class="header">
+            <button class="yourweather tab">Your Weather</button>
+            <button class="search tab">Search Weather</button>
+        </div>
+
+        <!--container to show when access not given-->
+
+        <div class="no-access">
+            <img src="location.png" alt="" class="location-access" height="80px" width="80px">
+            <h2>Grant Location Access</h2>
+            <p>Allow Access To Get Weather Information</p>
+            <button class="grant">GRANT ACCESS</button>
+        </div>
+            <!--form to get searched city weather-->
+
+            <form>
+                <input type="text" placeholder="Search for city ..." class="search" id="search">
+                <button type="submit" class="submit">
+                    <img src="search.png" alt=""  width="20" height="20">
+                </button>
+            </form>
+
+           <!--error container-->
+               
+           <div class="error">
+            <img src="not-found.png" alt="" height="300px" width="300px">
+            <p>city not found</p>
+        </div>
+
+        <!--container to display when access is given-->
+
+        <div class="acess-given">
+
+            <!--location and flag container-->
+
+           <div class="location"> 
+            <p class="location-name">xyz</p>
+            <img src="https://flagcdn.com/144x108/in.png" alt="" height="20px" width="28px">
+           </div>
+           
+           <!--weather details-->
+
+         <div class="weather">
+            <p data-weather>xyz</p>
+            <img src="" alt="" class="weatherimage">
+            <h2 class="temp">xyz</h2>
+         </div>
+
+         <!--3 cards at the end-->
+
+        <div class="other-values">
+            <div class="parameter wind">
+                <img src="wind.png" alt="">
+                <h3>WINDSPEED</h3>
+                <p data-wind></p>
+            </div>
+            <div class="parameter humidity">
+                <img src="humidity.png" alt="">
+                <h3>HUMIDITY</h3>
+                <p data-humidity></p>
+            </div>
+            <div class="parameter cloud">
+                <img src="cloud.png" alt="">
+                <h3>CLOUDS</h3>
+                <p data-cloud></p>
+            </div>
+        </div>
+        </div>
+
+              <!--loading screen container-->
+
+              <div class="loading-container">
+                <img src="loading.gif" width="150" height="150">
+                <p>Loading</p>
+            </div>
+
+    </div>
+
+    <script src="weather.js"></script>
+</body>
+</html>
